@@ -1,0 +1,26 @@
+.cursor-pointer { cursor: pointer; }
+.cursor-hand { cursor: hand; }
+
+.decoration-none { text-decoration: none; }
+.hide { display: none; }
+.show, .block { display: block; }
+.show-inline { display: inline; }
+
+.overflow-hidden { overflow: hidden; }
+.overflow-x { overflow-x: scroll; }
+.overflow-y { overflow-y: scroll; }
+
+.nowrap { white-space: nowrap; }
+
+@each $breakpoint, $value in $breakpoints {
+    @media screen and (min-width: #{$value}) {
+        .#{$breakpoint}\:cursor-pointer { cursor: pointer; }
+        .#{$breakpoint}\:cursor-hand { cursor: hand; }
+
+        .#{$breakpoint}\:decoration-none { text-decoration: none; }
+        .#{$breakpoint}\:hide { display: none; }
+        .#{$breakpoint}\:show { display: block; }
+        .#{$breakpoint}\:overflow-hidden { overflow: hidden; }
+        .#{$breakpoint}\:show-inline { display: inline; }
+    }
+}

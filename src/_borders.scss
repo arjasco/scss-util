@@ -1,0 +1,38 @@
+@each $size, $value in $sizes {
+    .bt-#{$size} { 
+        border-top-width: #{$value};
+        border-top-style: solid;
+    }
+    .bb-#{$size} { 
+        border-bottom-width: #{$value};
+        border-bottom-style: solid;
+    }
+    .bl-#{$size} { 
+        border-left-width: #{$value};
+        border-left-style: solid;
+    }
+    .br-#{$size} { 
+        border-right-width: #{$value};
+        border-right-style: solid;
+    }
+    .b-#{$size} { 
+        border-width: #{$value};
+        border-style: solid;
+    }
+    .by-#{$size} { 
+        border-top-width: #{$value};
+        border-bottom-width: #{$value};
+        border-top-style: solid;
+        border-bottom-style: solid;
+    }
+    .bx-#{$size} { 
+        border-left-width: #{$value};
+        border-right-width: #{$value};
+        border-left-style: solid;
+        border-right-style: solid;
+    }
+
+    .rounded-#{$size} {
+        border-radius: #{$value};
+    }
+}

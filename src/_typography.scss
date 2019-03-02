@@ -1,0 +1,30 @@
+body {
+    font-family: $font-family;
+    font-size: $base-font-size;
+}
+
+p, code {
+    line-height: 140%;
+}
+
+h1, h2, h3 {
+    margin: 0;
+    padding: 0;
+}
+
+@each $size, $value in $font-sizes {
+    .f-#{$size} { font-size: #{$value} };
+}
+
+.text-center { text-align: center; }
+.text-left { text-align: left; }
+.text-right { text-align: right; }
+.bold { font-weight: 700; }
+
+@each $breakpoint, $value in $breakpoints {
+    @media screen and (min-width: #{$value}) {
+        .#{$breakpoint}\:text-center { text-align: center; }
+        .#{$breakpoint}\:text-left { text-align: left; }
+        .#{$breakpoint}\:bold { font-weight: 700; }
+    }
+}

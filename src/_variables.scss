@@ -1,0 +1,75 @@
+$font-family: 'Quicksand', sans-serif;
+$base-font-size: 62.5%;
+
+// General sizes, margins, padding, borders etc
+$sizes: (
+    0: 0px,
+    1: 1px,
+    4: 4px,
+    5: 5px,
+    10: 10px,
+    15: 15px,
+    20: 20px,
+    25: 25px,
+    30: 30px,
+    35: 35px,
+    40: 40px,
+    150: 150px,
+    180: 180px,
+    300: 300px,
+);
+
+// Widths and heights
+$dimensions: (
+    10: 10px,
+    15: 15px,
+    20: 20px,
+    30: 30px,
+    40: 40px,
+    50: 50px,
+    100: 100px,
+    125: 125px,
+    150: 150px,
+    300: 300px,
+    400: 400px,
+    500: 500px,
+);
+
+// Font sizes 
+$font-sizes: (
+    1: 1rem, //16px
+    2: 1.125rem, //20px
+    3: 1.5rem, //24px
+    4: 1.75rem, //28px
+    5: 2rem, //32px
+    6: 2.125rem, //36px
+    7: 2.5rem, //40px
+    8: 2.75rem, //44px
+    9: 3rem, //48px
+    10: 3.125rem, //52px
+    11: 3.5rem, //56px
+    12: 3.75rem, //60px
+    13: 4rem //64px
+);
+
+// Colors
+
+$colors: (
+    'white': #FFFFFF,
+    'primary': #757575,
+    'secondary': #D6D6D6,
+    'blue': #4A90E2,
+    'pale-blue': #EEF1F6,
+    'mid-pale-blue': #C4CED9,
+    'red': #D0021B,
+    'pale-red': #F2C3C3,
+    'green': #74B334,
+    'pale-green': #E3F7CF,
+);
+
+// Responsive breakpoints
+$breakpoints: (
+    'sm': 600px,
+    'md': 900px,
+    'lg': 1024px
+);

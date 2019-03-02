@@ -1,0 +1,167 @@
+.position-abs { position: absolute; }
+.position-rel { position: relative; }
+
+.flex { display: flex; }
+.flex-row { flex-direction: row; }
+.flex-column { flex-direction: column; }
+
+@for $value from 1 through 5 {
+    .flex-#{$value} { flex: #{$value}; };
+}
+
+.align-start { align-items: flex-start; }
+.align-end { align-items: flex-end; }
+.align-center { align-items: center; }
+
+.justify-start { justify-content: flex-start; }
+.justify-end { justify-content: flex-end; }
+.justify-center { justify-content: center; }
+.justify-around { justify-content: space-around; }
+.justify-between { justify-content: space-between; }
+
+.table-fixed { table-layout: fixed; };
+
+.fixed { position: fixed; }
+.m-auto { margin:0 auto; }
+
+// widths and heights
+.vw-100 { width: 100vw; }
+.vh-100 { height: 100vh; }
+
+.w-100perc { width: 100%; }
+.h-100perc { height: 100%; }
+
+@each $size, $value in $dimensions {
+    .w-#{$size} { width: #{$value}; }
+    .h-#{$size} { height: #{$value}; }
+}
+
+// Top, bottom, left right
+@each $size, $value in $sizes {
+    .t-#{$size} { top: #{$value}; }
+    .l-#{$size} { left: #{$value}; }
+    .b-#{$size} { bottom: #{$value}; }
+    .r-#{$size} { right: #{$value}; }
+}
+
+// Margins
+@each $size, $value in $sizes {
+    .mt-#{$size} { margin-top:#{$value}; }
+    .-mt-#{$size} { margin-top:-#{$value}; }
+    .mr-#{$size} { margin-right:#{$value}; }
+    .-mr-#{$size} { margin-right:#{$value}; }
+    .mb-#{$size} { margin-bottom:#{$value}; }
+    .-mb-#{$size} { margin-bottom:#{$value}; }
+    .ml-#{$size} { margin-left:#{$value}; }
+    .-ml-#{$size} { margin-left:#{$value}; }
+    .m-#{$size} { margin: #{$value}; }
+    .my-#{$size} {
+        margin-top: #{$value};
+        margin-bottom: #{$value};
+    }
+    .mx-#{$size} {
+        margin-left: #{$value};
+        margin-right: #{$value};
+    }
+}
+
+// Paddings
+@each $size, $value in $sizes {
+    .pt-#{$size} { padding-top:#{$value}; }
+    .-pt-#{$size} { padding-top:#{$value}; }
+    .pr-#{$size} { padding-right:#{$value}; }
+    .-pr-#{$size} { padding-right:#{$value}; }
+    .pb-#{$size} { padding-bottom:#{$value}; }
+    .-pb-#{$size} { padding-bottom:#{$value}; }
+    .pl-#{$size} { padding-left:#{$value}; }
+    .-pl-#{$size} { padding-left:#{$value}; }
+    .p-#{$size} {
+        padding: #{$value};
+    }
+    .py-#{$size} {
+        padding-top: #{$value};
+        padding-bottom: #{$value};
+    }
+    .px-#{$size} {
+        padding-left: #{$value};
+        padding-right: #{$value};
+    }
+}
+
+
+@each $breakpoint, $value in $breakpoints {
+    @media screen and (min-width: #{$value}) {
+        .#{$breakpoint}\:position-abs { position: absolute; }
+        .#{$breakpoint}\:position-rel { position: relative; }
+
+        .#{$breakpoint}\:flex { display: flex; }
+        .#{$breakpoint}\:flex-row { flex-direction: row; }
+        .#{$breakpoint}\:flex-column { flex-direction: column; }
+
+        @for $value from 1 through 5 {
+            .#{$breakpoint}\:flex-#{$value} { flex: #{$value}; };
+        }
+
+        .#{$breakpoint}\:align-start { align-items: flex-start; }
+        .#{$breakpoint}\:align-end { align-items: flex-end; }
+        .#{$breakpoint}\:align-center { align-items: center; }
+
+        .#{$breakpoint}\:justify-start { justify-content: flex-start; }
+        .#{$breakpoint}\:justify-end { justify-content: flex-end; }
+        .#{$breakpoint}\:justify-center { justify-content: center; }
+        .#{$breakpoint}\:justify-around { justify-content: space-around; }
+        .#{$breakpoint}\:justify-between { justify-content: space-between; }
+
+        // Margins
+        @each $size, $value in $sizes {
+            .#{$breakpoint}\:mt-#{$size} { margin-top:#{$value}; }
+            .#{$breakpoint}\:-mt-#{$size} { margin-top:#{$value}; }
+            .#{$breakpoint}\:mr-#{$size} { margin-right:#{$value}; }
+            .#{$breakpoint}\:-mr-#{$size} { margin-right:#{$value}; }
+            .#{$breakpoint}\:mb-#{$size} { margin-bottom:#{$value}; }
+            .#{$breakpoint}\:-mb-#{$size} { margin-bottom:#{$value}; }
+            .#{$breakpoint}\:ml-#{$size} { margin-left:#{$value}; }
+            .#{$breakpoint}\:-ml-#{$size} { margin-left:#{$value}; }
+            .#{$breakpoint}\:m-#{$size} { margin: #{$value}; }
+            .#{$breakpoint}\:my-#{$size} {
+                margin-top: #{$value};
+                margin-bottom: #{$value};
+            }
+            .#{$breakpoint}\:mx-#{$size} {
+                margin-left: #{$value};
+                margin-right: #{$value};
+            }
+        }
+
+        // Paddings
+        @each $size, $value in $sizes {
+            .#{$breakpoint}\:pt-#{$size} { padding-top:#{$value}; }
+            .#{$breakpoint}\:-pt-#{$size} { padding-top:#{$value}; }
+            .#{$breakpoint}\:pr-#{$size} { padding-right:#{$value}; }
+            .#{$breakpoint}\:-pr-#{$size} { padding-right:#{$value}; }
+            .#{$breakpoint}\:pb-#{$size} { padding-bottom:#{$value}; }
+            .#{$breakpoint}\:-pb-#{$size} { padding-bottom:#{$value}; }
+            .#{$breakpoint}\:pl-#{$size} { padding-left:#{$value}; }
+            .#{$breakpoint}\:-pl-#{$size} { padding-left:#{$value}; }
+            .#{$breakpoint}\:p-#{$size} {
+                padding: #{$value};
+            }
+            .#{$breakpoint}\:py-#{$size} {
+                padding-top: #{$value};
+                padding-bottom: #{$value};
+            }
+            .#{$breakpoint}\:px-#{$size} {
+                padding-left: #{$value};
+                padding-right: #{$value};
+            }
+        }
+
+        // Position
+        @each $size, $value in $sizes {
+            .#{$breakpoint}\:t-#{$size} { top: #{$value}; }
+            .#{$breakpoint}\:l-#{$size} { left: #{$value}; }
+            .#{$breakpoint}\:b-#{$size} { bottom: #{$value}; }
+            .#{$breakpoint}\:r-#{$size} { right: #{$value}; }
+        }
+    }
+}
